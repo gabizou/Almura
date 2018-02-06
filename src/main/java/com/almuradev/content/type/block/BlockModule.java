@@ -10,6 +10,7 @@ package com.almuradev.content.type.block;
 import com.almuradev.almura.shared.inject.CommonBinder;
 import com.almuradev.content.ContentType;
 import com.almuradev.content.loader.MultiTypeProcessorBinder;
+import com.almuradev.content.registry.finder.RegistryFinder;
 import com.almuradev.content.type.block.facet.BlockExperience;
 import com.almuradev.content.type.block.processor.AABBBlockContentProcessor;
 import com.almuradev.content.type.block.processor.DestroyActionBlockContentProcessor;
@@ -27,6 +28,8 @@ import com.almuradev.content.type.block.type.horizontal.HorizontalBlockModule;
 import com.almuradev.content.type.block.type.normal.NormalBlockModule;
 import com.google.inject.TypeLiteral;
 import net.kyori.violet.AbstractModule;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import org.spongepowered.api.block.BlockType;
 
 public final class BlockModule extends AbstractModule implements CommonBinder {
 
@@ -34,6 +37,7 @@ public final class BlockModule extends AbstractModule implements CommonBinder {
     protected void configure() {
         this.inSet(ContentType.class).addBinding().toInstance(new ContentType.Impl("block", BlockContentTypeLoader.class));
         this.facet().add(BlockContentTypeLoader.class);
+        this.bind(new TypeLiteral<RegistryFinder<BlockType>>(){}).toInstance(RegistryFinder.create(ForgeRegistries.BLOCKS));
         this.install(new ContainerBlockModule());
         this.install(new CropBlockModule());
         this.install(new HorizontalBlockModule());
