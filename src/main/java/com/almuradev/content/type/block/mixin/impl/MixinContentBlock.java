@@ -103,7 +103,7 @@ public abstract class MixinContentBlock extends MixinBlock implements ContentBlo
         return ((AbstractBlockStateDefinition<?, ?, ?>) this.definition(state)).blockFaceShape;
     }
 
-    // Almura Start - Handle drops from Break
+    // Almura Start - Handle drops
     @Override
     public void harvestBlock(final World world, final EntityPlayer player, final BlockPos pos, final IBlockState state, @Nullable final TileEntity te, final ItemStack stack) {
         BlockUtil.handleHarvest(this, world, player, pos, state, te, stack);
@@ -113,5 +113,5 @@ public abstract class MixinContentBlock extends MixinBlock implements ContentBlo
     public void dropBlockAsItemWithChance(final World world, final BlockPos pos, final IBlockState state, final float chance, final int fortune) {
         BlockUtil.handleDropBlockAsItemWithChance(this, world, pos, state, chance, fortune);
     }
-    // Almura End - Handle drops from Break
+    // Almura End - Handle drops
 }
