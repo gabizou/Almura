@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = BlockLeaves.class, priority = 999)
+@Mixin(value = BlockLeaves.class, priority = 1001)
 public abstract class MixinBlockLeaves {
 
     @Inject(method = "destroy", at = @At("HEAD"))

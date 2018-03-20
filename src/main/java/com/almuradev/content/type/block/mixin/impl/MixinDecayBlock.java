@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import javax.annotation.Nullable;
 
-@Mixin(value = LeafBlockImpl.class, priority = 1001)
+@Mixin(value = LeafBlockImpl.class, priority = 1002)
 public abstract class MixinDecayBlock implements IMixinDecayBlock, ContentBlock {
 
     @Nullable
