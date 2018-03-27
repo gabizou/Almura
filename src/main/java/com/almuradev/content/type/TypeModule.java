@@ -16,7 +16,6 @@ import com.almuradev.content.type.flower.FlowerModule;
 import com.almuradev.content.type.generation.GenerationModule;
 import com.almuradev.content.type.grass.GrassModule;
 import com.almuradev.content.type.item.ItemModule;
-import com.almuradev.content.type.itemgroup.ItemGroupModule;
 import com.almuradev.content.type.mapcolor.MapColorModule;
 import com.almuradev.content.type.material.MaterialModule;
 import com.almuradev.content.type.tree.TreeModule;
@@ -30,7 +29,6 @@ public final class TypeModule extends AbstractModule {
         this.install(new BlockSoundGroupModule());
         this.install(new GenerationModule());
         this.install(new ItemModule());
-        this.install(new ItemGroupModule());
         this.install(new MapColorModule());
         this.install(new MaterialModule());
         this.install(new TreeModule());

@@ -13,10 +13,6 @@ import com.almuradev.content.type.item.type.food.FoodItemImpl;
 import com.almuradev.content.type.item.type.normal.NormalItemImpl;
 import com.almuradev.content.type.item.type.seed.SeedItemImpl;
 import com.almuradev.content.type.item.type.slab.SlabItemImpl;
-import com.almuradev.content.type.item.type.tool.type.hoe.HoeToolItemImpl;
-import com.almuradev.content.type.item.type.tool.type.pickaxe.PickaxeToolItemImpl;
-import com.almuradev.content.type.item.type.tool.type.shovel.ShovelToolItemImpl;
-import com.almuradev.content.type.item.type.tool.type.sickle.SickleToolItemImpl;
 import com.almuradev.content.type.itemgroup.ItemGroup;
 import com.almuradev.content.type.itemgroup.mixin.iface.IMixinLazyItemGroup;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,13 +24,9 @@ import javax.annotation.Nullable;
 
 @Mixin({
     FoodItemImpl.class,
-    HoeToolItemImpl.class,
     NormalItemImpl.class,
-    PickaxeToolItemImpl.class,
     SeedItemImpl.class,
-    ShovelToolItemImpl.class,
     SlabItemImpl.class,
-    SickleToolItemImpl.class
 })
 public abstract class MixinContentItem extends MixinItem implements ContentItem, IMixinLazyItemGroup {
     @Nullable private Delegate<ItemGroup> lazyItemGroup;

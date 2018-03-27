@@ -11,18 +11,11 @@ import com.almuradev.content.ContentType;
 import com.almuradev.content.loader.MultiTypeProcessorBinder;
 import com.almuradev.content.type.block.facet.BlockExperience;
 import com.almuradev.content.type.block.processor.AABBProcessor;
-import com.almuradev.content.type.block.processor.BlockFaceShapeProcessor;
 import com.almuradev.content.type.block.processor.DestroyActionProcessor;
 import com.almuradev.content.type.block.processor.FireSpreadSpeedProcessor;
 import com.almuradev.content.type.block.processor.FlammabilityProcessor;
-import com.almuradev.content.type.block.processor.HardnessProcessor;
-import com.almuradev.content.type.block.processor.ItemGroupProcessor;
-import com.almuradev.content.type.block.processor.LightProcessor;
-import com.almuradev.content.type.block.processor.MapColorProcessor;
-import com.almuradev.content.type.block.processor.MaterialProcessor;
 import com.almuradev.content.type.block.processor.ParentProcessor;
 import com.almuradev.content.type.block.processor.RenderLayerProcessor;
-import com.almuradev.content.type.block.processor.ResistanceProcessor;
 import com.almuradev.content.type.block.processor.SoundProcessor;
 import com.almuradev.content.type.block.type.container.ContainerBlockModule;
 import com.almuradev.content.type.block.type.crop.CropBlockModule;
@@ -59,13 +52,6 @@ public final class BlockModule extends AbstractModule implements CoreBinder {
                 this.processors()
                         .all(AABBProcessor.class)
                         .all(DestroyActionProcessor.class)
-                        .all(BlockFaceShapeProcessor.class)
-                        .all(HardnessProcessor.class)
-                        .all(ItemGroupProcessor.class)
-                        .all(LightProcessor.class)
-                        .all(MapColorProcessor.class)
-                        .all(MaterialProcessor.class)
-                        .all(ResistanceProcessor.class)
                         .all(SoundProcessor.class)
                         .all(FlammabilityProcessor.class)
                         .all(FireSpreadSpeedProcessor.class)

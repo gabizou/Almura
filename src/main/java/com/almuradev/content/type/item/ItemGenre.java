@@ -12,11 +12,6 @@ import com.almuradev.content.type.item.type.food.FoodItem;
 import com.almuradev.content.type.item.type.normal.NormalItem;
 import com.almuradev.content.type.item.type.seed.SeedItem;
 import com.almuradev.content.type.item.type.slab.SlabItem;
-import com.almuradev.content.type.item.type.tool.type.axe.AxeToolItem;
-import com.almuradev.content.type.item.type.tool.type.hoe.HoeToolItem;
-import com.almuradev.content.type.item.type.tool.type.pickaxe.PickaxeToolItem;
-import com.almuradev.content.type.item.type.tool.type.shovel.ShovelToolItem;
-import com.almuradev.content.type.item.type.tool.type.sickle.SickleToolItem;
 
 /**
  * An enumeration of item types.
@@ -38,27 +33,7 @@ public enum ItemGenre implements ContentType.MultiType<ContentItem, ContentItem.
     /**
      * An item type representing a slab.
      */
-    SLAB("slab", SlabItem.Builder.class),
-    /**
-     * An item type representing an axe.
-     */
-    TOOL_AXE("tool_axe", AxeToolItem.Builder.class),
-    /**
-     * HOE HOE HOE
-     */
-    TOOL_HOE("tool_hoe", HoeToolItem.Builder.class),
-    /**
-     * An item type representing a pickaxe.
-     */
-    TOOL_PICKAXE("tool_pickaxe", PickaxeToolItem.Builder.class),
-    /**
-     * An item type representing a shovel.
-     */
-    TOOL_SHOVEL("tool_shovel", ShovelToolItem.Builder.class),
-    /**
-     * An item type representing a sickle.
-     */
-    TOOL_SICKLE("tool_sickle", SickleToolItem.Builder.class);;
+    SLAB("slab", SlabItem.Builder.class);
 
     /**
      * The id of this item type.
